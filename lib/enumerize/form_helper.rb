@@ -1,6 +1,6 @@
 # backport of https://github.com/rails/rails/commit/3be9e8a0c2187744b6c9879ca2836cef5ebed693
-if defined?(ActionView::Helpers::InstanceTag)
-  ActionView::Helpers::InstanceTag.class_eval do
+if defined?(ActionView::Helpers::ActiveModelInstanceTag)
+  ActionView::Helpers::ActiveModelInstanceTag.class_eval do
     def self.check_box_checked?(value, checked_value)
       case value
       when TrueClass, FalseClass
